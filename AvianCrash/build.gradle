@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.example.Main'
+
+sourceCompatibility = 1.8
+
+repositories {
+    flatDir {
+        dirs '../libs'
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+}
